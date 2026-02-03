@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioArq | Bioarquitectura y Reutilización</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Lora:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Intro: La Pila de Escombros que se vuelve Hogar -->
+    <div id="intro-overlay">
+        <div class="mosaic-stage" id="mosaic"></div>
+        <div id="intro-msg">Transformando el descarte en arquitectura</div>
+    </div>
+
+    <!-- Navegación Superior -->
+    <header class="main-header">
+        <div class="logo">Bio<span>Arq</span></div>
+        <nav>
+            <a href="#articulos">¿Por qué reutilizar?</a>
+            <a href="#configurador">Simular Casa</a>
+            <a href="#" class="btn-res" onclick="location.reload()">Reiniciar</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección 1: Artículos de Valor -->
+        <section id="articulos" class="section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Materia con Propósito</h2>
+                    <p>3 pilares del por qué elegir materiales recuperados.</p>
+                </div>
+
+                <div class="articles-menu">
+                    <button class="art-btn active" onclick="showArticle(0)">Madera Noble</button>
+                    <button class="art-btn" onclick="showArticle(1)">Metal Industrial</button>
+                    <button class="art-btn" onclick="showArticle(2)">Salud y Clima</button>
+                </div>
+
+                <div class="article-viewer" id="article-viewer">
+                    <!-- Contenido dinámico -->
+                    <div class="article-content">
+                        <h3>Madera Recobrada</h3>
+                        <p>La madera de demolición o pallets industriales ya ha pasado por un proceso de secado natural
+                            de décadas. Esto le otorga una estabilidad que la madera nueva no tiene. Al construir con
+                            BioArq, preservamos el bosque y bajamos la temperatura de tu hogar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: El Configurador de 10 Pasos -->
+        <section id="configurador" class="section-padding bg-warm">
+            <div class="container">
+                <div class="wizard-container">
+                    <div class="wizard-header">
+                        <h2>Empezá tu proyecto</h2>
+                        <div class="progress-bar">
+                            <div id="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <div id="q-container" class="q-display">
+                        <!-- Preguntas aquí -->
+                    </div>
+
+                    <div class="wizard-nav">
+                        <button id="back-btn" class="btn-sec" disabled>Anterior</button>
+                        <button id="next-btn" class="btn-pri">Siguiente paso</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Resultados (Se muestra al finalizar) -->
+        <section id="resultados" class="section-padding" hidden>
+            <div class="container">
+                <div id="results-grid" class="results-grid"></div>
+                <div class="results-summary">
+                    <div class="price-card">
+                        <small>Inversión Estimada</small>
+                        <h1 id="res-price">USD 0</h1>
+                    </div>
+                    <div class="summary-details">
+                        <ul id="res-list"></ul>
+                        <a href="#" id="wa-link" target="_blank" class="btn-wa">Enviar Presupuesto a BioArq</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2026 BioArq | Bioarquitectura Moderna</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
